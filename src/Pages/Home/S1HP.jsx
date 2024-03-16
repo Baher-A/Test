@@ -1,11 +1,19 @@
-import { Box, Container, Grid, IconButton, Stack, Typography, useTheme } from "@mui/material";
+import {
+  Box,
+  Container,
+  Grid,
+  IconButton,
+  Stack,
+  Typography,
+  useTheme,
+} from "@mui/material";
 import React, { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { BubbleChart, ShoppingCart } from "@mui/icons-material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { HPSliderImages } from "../../Const/HomeConst";
-import PrimaryBtn from "../../CustomeComp/PrimaryBtn"
-import 'swiper/css';
+import PrimaryBtn from "../../CustomeComp/PrimaryBtn";
+import "swiper/css";
 const S1HP = () => {
   const navigat = useNavigate();
   const theme = useTheme();
@@ -157,12 +165,12 @@ const S1HP = () => {
           sm={6}
           sx={{ position: "relative", transition: "all .5s ease-in-out" }}
         >
-          <Swiper ref={SwiperRef} slidesPerView={1} >
+          <Swiper ref={SwiperRef} slidesPerView={1}>
             {HPSliderImages.map((slide, index) => {
               return (
                 <SwiperSlide key={slide.name}>
                   <Box
-                    component={'img'}
+                    component={"img"}
                     src={slide.img}
                     sx={{ width: "100%", minWidth: "300px" }}
                   />
