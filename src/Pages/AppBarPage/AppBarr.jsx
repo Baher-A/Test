@@ -34,7 +34,7 @@ import Logo from "../../assets/AppBarImages/MainLogo.png";
 
 const AppBarr = ({ themeMoode, SetthemeMoode }) => {
   const theme = useTheme();
-  //   const  //navigate = useNavigate();
+    const  navigate = useNavigate();
   const [innerw, setinnerw] = useState(window.innerWidth);
   const [ToggleMenu, setToggleMenu] = useState(false);
   return (
@@ -51,7 +51,7 @@ const AppBarr = ({ themeMoode, SetthemeMoode }) => {
           <Link
             sx={{ cursor: "pointer" }}
             onClick={() => {
-              //   navigate("/");
+                navigate("/Test");
               //   ScrollToTopPAge();
             }}
           >
@@ -100,7 +100,7 @@ const AppBarr = ({ themeMoode, SetthemeMoode }) => {
               return (
                 <Link
                   onClick={() => {
-                    // navigate(item.path);
+                    navigate(item.path);
                     // ScrollToTopPAge();
                   }}
                   key={`${item.name} ${i}`}
