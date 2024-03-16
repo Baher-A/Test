@@ -1,4 +1,4 @@
-:root {
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -11,58 +11,367 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+} */
+
+
+*{
+  margin: 0 ;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+:root{
+  --varbordervalue:2px  ; 
+  --direction:0%;
+}
+.PrimaryButton{
+  background-color: #29E6FF;
+}
+.PrimaryButton:hover{
+  box-shadow: -1px -1px  10px 5px#29E6FF !important;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+.BGimg{
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: all 300ms ease-in;
 }
-a:hover {
-  color: #535bf2;
+.BGimg2{
+max-width: 700px;
+height: 100%;
+object-fit: contain;
+transition: all 300ms ease-in;
+
 }
 
-body {
-  margin: 0;
+.bgc1{
+  background-image: Linear-gradient(90deg,#2980B9,#57a8c5,#FFFFFF) !important;
+}
+
+button{
+  transition: all 0.5s ease-in-out !important;
+}
+.Show{
+  display: block!important;
+opacity: 1;
+  transform:translate(0%);
+  transition: all .5s ease-in-out;
+}
+
+.Hide{
+  opacity: 0;
+  display: none!important;
+  transition: all .5s ease-in-out;
+  transform:translate(55%);
+}
+body{
+  overflow-x: hidden ;
+}
+
+/* Image slider style */
+.Scrooler{
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+.Inner__scrooler{
+  width: max-content;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  gap: 1rem;
+  margin: 2.5rem auto 0;
+  animation: scroolx 45s linear infinite  ;
+  /* background-color: skyblue; */
+  
+}
+.imagecontainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 240px;
+  /* max-width: 400px; */
+
+}
+.Imageees{
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 2rem;
+  
+}
+.Innnerscroller{
+  width: max-content !important;
+  display: flex !important;
+  gap: 1rem;
+}
+@keyframes scroolx {
+  to{
+    transform: translateX(calc(-50%));
+  }
+}
+@keyframes rtlScroll {
+  to{
+    transform: translateX(-50%);
+  }
+}
+/* End Image slider */
+.FooterLinks{
+  text-decoration: none;
+  color: #FFF;
+  padding: 0;
+  margin: 0;
+}
+.FooterLinks:hover{
+  text-decoration: none;
+  color: rgb(167, 164, 164);
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.secButon{
+  font-weight: 600 !important;
+  /* color: #403f41; */
+}
+/* .secButon:hover{ */
+  /* box-shadow: -1px -1px  40px 5px #421867 !important; */
+/* } */
+
+.ShowIconsAnimation,.ShowCheckedMark {
+  opacity: 0;
+  animation:SocialIconanimation 8s ease forwards;
+  animation-delay: calc(var(--order)*300ms);
+}
+@keyframes SocialIconanimation{
+  20%{
+    opacity: 0;
+    transform: translateY(-40%);
+    
+  }
+  30%,100%{
+    opacity: 1;
+    transform: translateY(0%);
+
+  }
+}
+.ShowBOYAndGirlSide {
+  opacity: 0 ;
+  animation: fadeInSide 2s ease .5s forwards;
+}
+@keyframes fadeInSide {
+  from{
+    opacity: 0;
+    transform: translateY(40%);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  
+}
+.RedLineAnimation{
+  animation:RedLineMovement 1s ease-in-out 2s alternate 2 ;
+}
+@keyframes RedLineMovement {
+  from{
+    transform: translateY(0%);
+  }
+  to{
+    transform: translateY(90%);
+  }
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.II{
+  -webkit-mask-image: url('./assets/AboutUs/Plob.svg');
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  object-fit: contain;
+}
+.AboutusBg{
+  background-image: url('./assets/AboutUs/Aboutus3.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.OpenMenu{
+  transform: translateX(0px);
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+.OpenMenu:hover{
+  transform: scale(1.025);
+}
+.CloseMenu{
+  transform: translateX(-260px);
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+.ReviewformonClose{
+  transform: translateY(660px);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.ReviewformonOpen{
+  transform: translateY(0px);
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CustomizableButoon */
+.CustomizableButoon{
+  border: 0 solid;
+  box-sizing: border-box;
+  background-color: #000;
+  color: #FFF;
   cursor: pointer;
-  transition: border-color 0.25s;
+  font-size: 85%;
+  /* margin: 0; */
+  /* padding: 0; */
+  outline: 2px solid #FFF;
+  outline-offset: -2px !important;
+  overflow: hidden;
+  position: relative;
+  text-transform: uppercase;
+  transition: 0.2s linear 0.1s !important;
 }
-button:hover {
-  border-color: #646cff;
+.CustomizableButoon:-moz-focusring{
+  outline: auto;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.CustomizableButoon:hover{
+  background: purple;
+  outline-color: transparent;
+  transition: .2s linear .8s !important;
+  color: #FFF;
+
+}
+.CustomizableButoon span{
+  display: block;
+  position: absolute;
+  inset: 0;
+}
+.CustomizableButoon .top{
+  border-top: 2px solid purple;
+  opacity: 0;
+  transform: translateX(calc(-100% + var(--progressive,0%)));
+  transition: none;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.CustomizableButoon:hover .top {
+  --progressive:100%;
+  opacity: 1;
+  transition: transform .2s linear;
 }
+.CustomizableButoon .right{
+  border-right: 2px solid  purple;
+  opacity: 0;
+  transform: translateY(calc(-100% + var(--progressive,0%)));
+  transition: none;
+}
+
+.CustomizableButoon:hover .right {
+  --progressive:100%;
+  opacity: 1;
+  transition: transform .2s linear .2s;
+}
+.CustomizableButoon .bottom{
+  border-bottom: 2px solid  purple;
+  opacity: 0;
+  transform: translateX(calc(100% - var(--progressive,0%)));
+  transition: none;
+}
+
+.CustomizableButoon:hover .bottom {
+  --progressive:100%;
+  opacity: 1;
+  transition: transform .2s linear .4s;
+}
+.CustomizableButoon .left{
+  border-left: 2px solid  purple;
+  opacity: 0;
+  transform: translateY(calc(100% - var(--progressive,0%)));
+  transition: none;
+}
+
+.CustomizableButoon:hover .left {
+  --progressive:100%;
+  opacity: 1;
+  transition: transform .2s linear .6s;
+}
+/* *************************** Animation - Part **************************** */
+
+.FliprightHidden{
+  transform: rotateY(180deg) !important;
+  transform: translateX(100%) !important ;
+  filter: blur(5px) !important;
+  opacity: 0 !important;
+  transition: 1s linear !important;
+}
+.FliprightShow{
+  transform: rotateY(0deg);
+  transform: translateX(0%);
+  filter: blur(0px);
+  opacity: 1;
+  transition: 1s linear 1s;
+}
+.FliptopHidden{
+  transform: translateY(70%) !important ;
+  filter: blur(5px) !important;
+  opacity: 0 !important;
+  transition: 1s linear !important;
+}
+.FliptopShow{
+  transform: translateY(0%);
+  filter: blur(0px);
+  opacity: 1;
+  transition: .5s linear .2s !important;
+}
+
+.HIdeText{
+  /* var (--direction) ;  */
+  transform: translateX(calc(var(--direction) + -100%));
+  /* transform: translateX(-100%) ; */
+  opacity: 0 ;
+  filter: blur(7px) ;
+  transition: all 1s linear .2s;
+}
+.ShowText{
+  transform: translateX(0%) ;
+  opacity: 1 ;
+  filter: blur(0px) ;
+  transition: all .8s linear calc(var(--order)* 300ms);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ****************************************************************** */
