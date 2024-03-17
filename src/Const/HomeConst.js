@@ -1,12 +1,19 @@
-import { PermMediaOutlined, SaveOutlined, SentimentVerySatisfiedOutlined, SettingsVoice, Speed, ThumbUpAltOutlined } from "@mui/icons-material";
+import {
+  PermMediaOutlined,
+  SaveOutlined,
+  SentimentVerySatisfiedOutlined,
+  SettingsVoice,
+  Speed,
+  ThumbUpAltOutlined,
+} from "@mui/icons-material";
 import HPimgBlack from ".././assets/SliderImages/black.png";
 import HPimgRed from ".././assets/SliderImages/red.png";
 import HPimgYellow from ".././assets/SliderImages/yellow.png";
 
 export const HPSliderImages = [
-  { name: "Basic Card Black", img: HPimgBlack , color:'white' },
-  { name: "Basic Card red", img: HPimgRed ,color:'red'},
-  { name: "Basic Card Yellow", img: HPimgYellow ,color:'yellow' },
+  { name: "Basic Card Black", img: HPimgBlack, color: "white" },
+  { name: "Basic Card red", img: HPimgRed, color: "red" },
+  { name: "Basic Card Yellow", img: HPimgYellow, color: "yellow" },
 ];
 export const NewGEN = [
   {
@@ -50,5 +57,50 @@ export const NewGEN = [
     title: "Performance",
     subtitle: "Get stable and highly efficient performance at any time, 24/7",
     GradientColor: "linear-gradient(90deg, #56ab2f, #a8e063)",
+  },
+];
+
+export const ContentS3 = [
+  {
+    title: "Anti Scratch <br/> Business Card",
+    caption:
+      "Get superior protection to resist various factors that can damage your card with our distinctive version of scratch-resistant cards.",
+  },
+  {
+    scratch1: { title: "NFC Connection", caption: "High-speed connection" },
+    scratch2: {
+      title: "Cloud QR",
+      caption: "The new generation of QR communication",
+    },
+    scratch3: {
+      title: "One year warranty",
+      caption: "Get confidence for a whole year",
+    },
+    scratch4: {
+      title: "Exchange and return",
+      caption: "Possibility of exchange and return for 14 days",
+    },
+  },
+  {
+    Buttontext: "GET YOUR CARD",
+  },
+];
+
+export const S4HPConst = [
+  {
+    num: "0",
+    keyword: "Days",
+  },
+  {
+    num: "00",
+    keyword: "Hr",
+  },
+  {
+    num: "00",
+    keyword: "Min",
+  },
+  {
+    num: "00",
+    keyword: "Sec",
   },
 ];
