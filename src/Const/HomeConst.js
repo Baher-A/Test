@@ -9,6 +9,14 @@ import {
 import HPimgBlack from ".././assets/SliderImages/black.png";
 import HPimgRed from ".././assets/SliderImages/red.png";
 import HPimgYellow from ".././assets/SliderImages/yellow.png";
+import HomeCareLogo from ".././assets/HomeImages/LogoSliders/HomeCare.png";
+import GliterLogo from ".././assets/HomeImages/LogoSliders/Gliter.png";
+import LapipLogo from ".././assets/HomeImages/LogoSliders/Lapip.png";
+import LeoLogo from ".././assets/HomeImages/LogoSliders/Leo.png";
+import prochatLogo from ".././assets/HomeImages/LogoSliders/prochat.png";
+import SugarmilkLogo from ".././assets/HomeImages/LogoSliders/Sugarmilk.png";
+import VsLogo from ".././assets/HomeImages/LogoSliders/Vs.png";
+import YuridLogo from ".././assets/HomeImages/LogoSliders/Yurid.png";
 
 export const HPSliderImages = [
   { name: "Basic Card Black", img: HPimgBlack, color: "white" },
@@ -102,5 +110,46 @@ export const S4HPConst = [
   {
     num: "00",
     keyword: "Sec",
+  },
+];
+export const LogoS5HP = [
+  HomeCareLogo,
+  GliterLogo,
+  LapipLogo,
+  LeoLogo,
+  prochatLogo,
+  SugarmilkLogo,
+  VsLogo,
+  YuridLogo,
+];
+export const TableS5HP = [
+  {
+    Num: "1500",
+    KeyWord: "Companies in service",
+  },
+  {
+    Num: "180",
+    KeyWord: "Received licenses",
+  },
+  {
+    Num: "12",
+    KeyWord: "Professional lawyers",
+  },
+];
+export const DataSection = [
+  {
+    number: "30+",
+    Title: "Partners",
+    Caption: "Partners & Co founders",
+  },
+  {
+    number: "240+",
+    Title: "Successful deal",
+    Caption: "Share with our partners",
+  },
+  {
+    number: "3000+",
+    Title: "Online Account",
+    Caption: "Existing clients",
   },
 ];
