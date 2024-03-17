@@ -8,6 +8,10 @@ import S5HP from "./S5HP.jsx";
 import S6Hp from "./S6Hp.jsx";
 import S7Hp from "./S7Hp.jsx";
 import S8HP from "./S8HP.jsx";
+import S9HP from "./S9HP.jsx";
+import S10HP from "./S10HP.jsx";
+import S11HP from "./S11Hp.jsx";
+import FoOooOoter from "../FoOooOoter.jsx"
 const Home = () => {
   return (
     <Stack>
@@ -19,6 +23,10 @@ const Home = () => {
       <S6Hp />
       <S7Hp />
       <S8HP />
+      <S9HP />
+      <S10HP />
+      <S11HP />
+      <FoOooOoter/>
     </Stack>
   );
 };

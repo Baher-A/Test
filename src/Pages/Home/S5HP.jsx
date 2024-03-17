@@ -74,6 +74,7 @@ const S5HP = () => {
           {TableS5HP.map((el, Index) => {
             return (
               <Grid
+                key={el.KeyWord}
                 item
                 xs={4}
                 sx={{ gridTemplateColumns: "2", width: "100%", height: "100%" }}
