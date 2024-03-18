@@ -118,6 +118,47 @@ const S4HP = () => {
                 );
               })}
             </Box>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                width: "100%",
+                mt: 5,
+              }}
+            >
+              <PrimaryBtn
+                content={"GET YOUR CARD"}
+                onClick={() => {
+                  navigat("./products/Custom-Design");
+                  ScrollToTopPAge();
+                }}
+                sx={{
+                  mr: 3,
+                  bgcolor: `#333`,
+                  padding: "5px 20px ",
+                  "&:hover": {
+                    boxShadow:
+                      theme.palette.mode == "light"
+                        ? `1px 1px  5px 5px rgba(0,0,0,.3) !important`
+                        : `0px 0px  5px 5px rgba(255,255,255,.3) !important`,
+                    bgcolor: theme.palette.primary.dark,
+                  },
+                }}
+              >
+                GET YOUR CARD
+              </PrimaryBtn>
+              <SecondaryBtn
+                content={"Business Support"}
+                sx={{
+                  "&:hover": {
+                    boxShadow:
+                      theme.palette.mode == "light"
+                        ? `1px 1px  5px 5px rgba(0,0,0,.3) !important`
+                        : `0px 0px  5px 5px rgba(255,255,255,.3) !important`,
+                  },
+                }}
+              ></SecondaryBtn>
+            </Box>
           </Box>
         </Grid>
       </Grid>

@@ -178,13 +178,13 @@ body{
 }
 
 .II{
-  -webkit-mask-image: url('./assets/AboutUs/Plob.svg');
+  -webkit-mask-image: url('./assets/AboutImages/Plob.svg');
   -webkit-mask-size: contain;
   -webkit-mask-repeat: no-repeat;
   object-fit: contain;
 }
 .AboutusBg{
-  background-image: url('./assets/AboutUs/Aboutus3.jpg');
+  background-image: url('./assets/AboutImages/Aboutus3.jpg');
   background-size: cover;
   background-position: center;
 }
