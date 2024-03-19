@@ -213,7 +213,60 @@ body{
   transition: all 0.5s ease-in-out;
 }
 
+/*  */
+@keyframes DLine {
+  from{
+      opacity: .8;
+      transform: translateY(0px) ;
+  }
+  to{
+      opacity: 1;
+      transform: translateY(-70px);
+      
+  }
+  
+}
 
+@keyframes DAnalysis {
+  from{
+      opacity: 0;
+      transform: translateY(0px);
+  }
+  to{
+      opacity: 1;
+      
+      transform: translateY(30px);
+
+  }
+  
+}
+
+.Datadig{
+  animation: DIagram 1s ease-in-out  ;
+}
+  @keyframes DIagram {
+      from{
+          opacity: 0;
+          transform: translateY(20%);
+      }
+      to{
+     
+          opacity: 1;
+          transform: translateY(0%);
+
+      }
+      
+  }
+
+.ShowFigures2{
+    animation: DAnalysis .5s linear 1s alternate 2;
+  }
+  .ShowFigures{
+
+    animation: DLine 1s linear 2s alternate 2     ;
+
+}
+/*  */
 
 
 
