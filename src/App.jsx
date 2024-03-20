@@ -11,7 +11,7 @@ import Product from "./Pages/Product/Product"
 import About from "./Pages/About/About"
 import StartNode from "./Pages/StartNode/StartNode";
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from "react-router-dom";
-
+import Shop from "./Pages/Product/Shop";
 
 
 function App() {
@@ -24,8 +24,12 @@ function App() {
       <Route path="/personal" element={<Personal />} />
       <Route path="/about" element={<About />} />
         <Route path="/products" element={<Product />} >
+          <Route index element={<Shop/>}>
+
+         
           </Route>
 
+      </Route>
       </Route>
     )
   )
