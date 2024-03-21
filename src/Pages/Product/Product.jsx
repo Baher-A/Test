@@ -4,8 +4,7 @@ import { Outlet } from 'react-router-dom'
 
 const Product = () => {
   return (
-    <Stack sx={{ mt: '15rem' }}>
-      
+    <Stack sx={{ mt:'4rem' }}>
       <Outlet />
     </Stack>
   )

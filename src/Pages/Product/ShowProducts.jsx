@@ -14,6 +14,8 @@ import {
 } from "@mui/material";
 import { Favorite, Search } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
+import { ScrolToOoTop } from "../../Const/ProductConst";
+import PrimaryBtn from "../../CustomeComp/PrimaryBtn";
 const ShowProducts = ({
   PRODUCTS,
   PageNumber,
@@ -75,8 +77,8 @@ const ShowProducts = ({
         >
           <Link
             onClick={() => {
-              navigate(`/products/${PRODUCT.ProductName}`);
-              ScrollToTopPAge();
+              navigate(`${PRODUCT.ProductName}`);
+              ScrolToOoTop();
               // return <ProductDesign />;
             }}
           >
@@ -85,15 +87,18 @@ const ShowProducts = ({
               src={PRODUCT.imaag}
               sx={{
                 width: "100%",
+                height: "270px",
+                padding: "10px",
+                objectFit: "contain",
                 top: 0,
                 objectFit: "cover",
                 justifyContent: "center",
                 flexDirection: "column",
                 display: "flex",
                 objectPosition: "center",
-                borderRadius: "15px",
-                zIndex: "-1",
+                borderRadius: "30px",
                 transition: "all 400ms ease-in-out",
+                mb: 1,
               }}
             />
           </Link>
@@ -127,9 +132,8 @@ const ShowProducts = ({
                 color: Mytheme.palette.text.primary,
               }}
               onClick={() => {
-                navigate(`/products/${PRODUCT.ProductName}`);
-                ScrollToTopPAge();
-                // return <ProductDesign />;
+                navigate(`${PRODUCT.ProductName}`);
+                ScrolToOoTop();
               }}
             >
               <Typography
@@ -247,19 +251,22 @@ const ShowProducts = ({
 
           {/* **************************************************************************************** */}
 
-          <Button
+          <PrimaryBtn
+            content={"Add to Cart"}
             variant="contained"
             onClick={() => {
               setSnachADDTOCART(true);
             }}
             sx={{
               paddingX: { md: "10px" },
+              bgcolor:
+                Mytheme.palette.mode == "dark"
+                  ? Mytheme.palette.primary.dark
+                  : "#4e4e4e",
               borderRadius: "8px",
               fontWeight: "bold",
             }}
-          >
-            Add to Cart
-          </Button>
+          ></PrimaryBtn>
           {/* **************************************************************************************** */}
           <ToggleButton
             value="check"

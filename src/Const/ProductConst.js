@@ -14,6 +14,7 @@ import SmartTag from "../assets/ShopPage/SmartTag.png";
 import Key from "../assets/ShopPage/Key.png";
 import Joker from "../assets/ShopPage/Joker.png";
 import GoldyLinky from "../assets/ShopPage/GoldyLinky.png";
+import Crown from "../assets/PersonalImages/1.jpg"
 import {
   WhatsApp,
   X,
@@ -79,7 +80,7 @@ export const ProductInformation = [
     ProductReview: [],
   },
   {
-    imaag: BasicBlackCard,
+    imaag: BlackCrown,
     ProductName: "Bold-Card",
     ProductSubTitle: "Smart Card, Limted Edition",
     instock: "no",
@@ -90,7 +91,7 @@ export const ProductInformation = [
     ProductReview: [],
   },
   {
-    imaag: BlackCrown,
+    imaag: Crown,
     ProductName: "Crown-Card",
     ProductSubTitle: "Smart Card, Premium Card",
     instock: "yes",
@@ -261,3 +262,8 @@ export const marks = [
     label: "500 EG",
   },
 ];
+
+export function ScrolToOoTop()
+{
+  window.scrollTo('smooth', 0);
+}

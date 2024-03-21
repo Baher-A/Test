@@ -13,7 +13,6 @@ import {
   ListItem,
   ListItemButton,
   ListItemIcon,
-  ListItemText,
   useTheme,
   Stack,
 } from "@mui/material";
@@ -21,21 +20,17 @@ import {
 import {
   Close,
   DarkMode,
-  Home,
   Hub,
-  Inventory,
   LightMode,
   Menu,
-  SensorOccupied,
-} from "@mui/icons-material";
 
+} from "@mui/icons-material";
 import { appitems } from "../../Const/APPBarConst";
 import Logo from "../../assets/AppBarImages/MainLogo.png";
-
+import { ScrolToOoTop } from "../../Const/ProductConst"
 const AppBarr = ({ themeMoode, SetthemeMoode }) => {
   const theme = useTheme();
     const  navigate = useNavigate();
-  const [innerw, setinnerw] = useState(window.innerWidth);
   const [ToggleMenu, setToggleMenu] = useState(false);
   return (
     <AppBar
@@ -101,13 +96,13 @@ const AppBarr = ({ themeMoode, SetthemeMoode }) => {
                 <Link
                   onClick={() => {
                     navigate(item.path);
-                    // ScrollToTopPAge();
+                    ScrolToOoTop();
                   }}
                   key={`${item.name} ${i}`}
                   to={item.path}
                   sx={{
                     textDecoration: "none",
-                    color: theme.palette.text.primary,
+                    color: 'white',
                     cursor: "pointer",
                     padding: "3px",
                     transition: "all .5s ease-out",
@@ -224,7 +219,7 @@ const AppBarr = ({ themeMoode, SetthemeMoode }) => {
                   }}
                   onClick={() => {
                     navigate(item.path);
-                    ScrollToTopPAge();
+                    ScrolToOoTop();
                   }}
                 >
                   <ListItemIcon

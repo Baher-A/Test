@@ -29,6 +29,8 @@ import {
 import { Close } from "@mui/icons-material";
 import ShowProducts from "./ShowProducts";
 import QuickView from "./QuickView.jsx";
+import { ScrolToOoTop } from "../../Const/ProductConst";
+
 
 const Shop = () => {
   const navigate = useNavigate();
@@ -234,6 +236,7 @@ const Shop = () => {
                     sx={{ textDecoration: "none" }}
                     onClick={() => {
                       navigate(`${product.name}`);
+                      ScrolToOoTop()
                     }}
                   >
                     <Card

@@ -12,22 +12,25 @@ import About from "./Pages/About/About"
 import StartNode from "./Pages/StartNode/StartNode";
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from "react-router-dom";
 import Shop from "./Pages/Product/Shop";
-
+import ProductDesign from "./Pages/Product/ProductDesign";
 
 function App() {
 
   const router = createBrowserRouter(
-    createRoutesFromElements(
+    createRoutesFromElements( 
       <Route path="/" element={<StartNode />}>
-      <Route path="/Test" element={<Home />}/>
       <Route index element={<Home />}/>
-      <Route path="/personal" element={<Personal />} />
-      <Route path="/about" element={<About />} />
+      <Route path="/Test" element={<Home />}/>
+      <Route path="/Home" element={<Home />}/>
+      <Route path="/Personal" element={<Personal />} />
+      <Route path="/About" element={<About />} />
         <Route path="/products" element={<Product />} >
-          <Route index element={<Shop/>}>
+          <Route index element={<Shop />}>
+            
 
          
           </Route>
+            <Route path=":name" element={<ProductDesign/>} />
 
       </Route>
       </Route>
